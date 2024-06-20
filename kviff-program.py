@@ -49,12 +49,12 @@ for film, start_time, end_time in film_projections:
 unseen_films -= seen_films
 
 # Print the selected projections
-print("Filmy, které je možné shlédnout:")
+print("Films that will be possible to see:")
 for film, start_time, end_time in max_films:
     print(f"{film}: {start_time.strftime('%d.%m. %H:%M')} - {end_time.strftime('%d.%m. %H:%M')}")
 
-print(f'\nCelkem tedy: {len(max_films)}')
+print(f'\nIn total: {len(max_films)}')
 
-print("\nFilmy, které nebude možné shlédnout kvůli nabitému rozvrhu:")
+print("\nFilms that will not fit into the schedule:")
 for film in unseen_films:
     print(f"{film}")
