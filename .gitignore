@@ -1,2 +1,9 @@
+#ignore
+*
 .env
 .DS_Store
+#keep
+!kviff*
+!.gitignore
+!LICENSE
+!README.md

@@ -7,8 +7,12 @@
 import re
 from datetime import datetime, timedelta
 
-with open('MujProgram.txt', 'r', encoding='utf-8') as file:
-    data = file.read()
+try:
+    with open('MujProgram.txt', 'r', encoding='utf-8') as file:
+        data = file.read()
+except:
+    with open('MyProgramme.txt', 'r', encoding='utf-8') as file:
+        data = file.read()
 
 # Extract films and their projection times
 film_pattern = re.compile(r'(.+?)\nRežie:.+?(\d{1,4}min.)\n.+?Projekce: (.+?)(?=\n\w|$)', re.DOTALL)
